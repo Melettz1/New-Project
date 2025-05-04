@@ -1,0 +1,363 @@
+/* Reset CSS - Remove margens e preenchimentos padrão de todos os elementos
+   e define o box-sizing para border-box para facilitar o cálculo de dimensões */
+* { 
+    margin : 0; /* Remove todas as margens externas de todos os elementos */
+    padding: 0; /* Remove todos os preenchimentos internos de todos os elementos */
+    box-sizing: border-box; /* Faz com que padding e border sejam incluídos no cálculo da largura/altura total */
+}
+
+/* Estilos gerais do corpo da página
+   Define as configurações base para todo o conteúdo */
+body { 
+    font-family: Arial, sans-serif; /* Define a fonte padrão como Arial, com fallback para sans-serif caso Arial não esteja disponível */
+    line-height: 1.6; /* Define o espaçamento entre linhas como 1.6 vezes o tamanho da fonte */
+    background-color: #f4f4f4; /* Define a cor de fundo como um cinza claro */
+    color: #333; /* Define a cor do texto como um cinza escuro */
+}
+
+/* Estilização do cabeçalho
+   Define o estilo da área superior do site */
+header {
+    background: #35424a; /* Define a cor de fundo como um azul escuro */
+    color: white; /* Define a cor do texto como branco */
+    padding: 2rem 0; /* Adiciona 2rem (32px) de espaçamento interno na vertical e 0 na horizontal */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Container para a foto e informações do perfil
+   Organiza os elementos do cabeçalho em uma coluna */
+.profile-container {
+    display: flex; /* Ativa o layout flexível */
+    flex-direction: column; /* Organiza os elementos em coluna (vertical) */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 1rem; /* Adiciona 1rem (16px) de espaçamento entre os elementos */
+}
+
+/* Estilo da imagem de perfil
+   Define o visual da foto do usuário */
+.profile-image {
+    display: block; /* Transforma o link em um bloco */
+    width: 150px; /* Define a largura da imagem como 150px */
+    height: 150px; /* Define a altura da imagem como 150px */
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o círculo */
+    border: 4px solid white; /* Adiciona uma borda branca de 4px */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para transformações */
+}
+
+/* Efeito hover na imagem
+   Define o comportamento quando o mouse passa sobre a imagem */
+.profile-image:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho da imagem (5%) */
+}
+
+/* Estilo da imagem dentro do link
+   Garante que a imagem preencha todo o espaço disponível */
+.profile-image img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do container */
+    height: 100%; /* Faz a imagem ocupar 100% da altura do container */
+    object-fit: cover; /* Mantém a proporção da imagem preenchendo o espaço */
+}
+
+/* Container das informações do perfil
+   Organiza o texto do cabeçalho */
+.profile-info {
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo do título principal
+   Define o visual do nome do usuário */
+header h1 {
+    margin-bottom: 0.5rem; /* Adiciona 0.5rem (8px) de margem inferior */
+    font-size: 2rem; /* Define o tamanho da fonte como 2rem (32px) */
+}
+
+/* Estilo do subtítulo
+   Define o visual da descrição */
+header p {
+    font-size: 1.1rem; /* Define o tamanho da fonte como 1.1rem (17.6px) */
+    opacity: 0.9; /* Define a opacidade do texto como 90% */
+}
+
+/* Estilização do menu de navegação
+   Define o visual da barra de navegação */
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo dos links do menu
+   Define o visual dos links de navegação */
+nav a {
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+/* Efeito hover nos links do menu
+   Define o comportamento quando o mouse passa sobre os links */
+nav a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
+
+/* Estilo da área principal de conteúdo
+   Define o espaçamento do conteúdo principal */
+main {
+    padding: 2rem; /* Adiciona 2rem (32px) de espaçamento interno em todas as direções */
+}
+
+/* Estilo das seções
+   Define o visual de cada seção do conteúdo */
+section {
+    margin-bottom: 2rem; /* Adiciona 2rem (32px) de margem inferior */
+    padding: 2rem; /* Adiciona 2rem (32px) de espaçamento interno */
+    background: white; /* Define o fundo como branco */
+    border-radius: 5px; /* Arredonda as bordas em 5px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+/* Estilo dos projetos
+   Define o visual de cada projeto listado */
+.projeto {
+    border: 1px solid #ddd; /* Adiciona uma borda cinza clara de 1px */
+    padding: 1rem; /* Adiciona 1rem (16px) de espaçamento interno */
+    margin-bottom: 1rem; /* Adiciona 1rem (16px) de margem inferior */
+    border-radius: 5px; /* Arredonda as bordas em 5px */
+}
+
+/* Estilo do link do projeto
+   Define o visual do link para o projeto */
+.project-link {
+    display: inline-flex; /* Ativa o layout flexível inline */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    gap: 0.5rem; /* Adiciona 0.5rem (8px) de espaçamento entre os elementos */
+    color: #35424a; /* Define a cor do texto como azul escuro */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    padding: 0.5rem 1rem; /* Adiciona espaçamento interno */
+    background-color: #f4f4f4; /* Define o fundo como cinza claro */
+    border-radius: 5px; /* Arredonda as bordas em 5px */
+    transition: all 0.3s ease; /* Adiciona transição suave para todas as propriedades */
+    margin-top: 1rem; /* Adiciona 1rem (16px) de margem superior */
+}
+
+/* Efeito hover no link do projeto
+   Define o comportamento quando o mouse passa sobre o link */
+.project-link:hover {
+    background-color: #35424a; /* Muda a cor de fundo para azul escuro */
+    color: white; /* Muda a cor do texto para branco */
+    transform: translateY(-2px); /* Move o link 2px para cima */
+}
+
+/* Estilo do ícone no link do projeto
+   Define o tamanho do ícone */
+.project-link i {
+    font-size: 0.9rem; /* Define o tamanho da fonte do ícone como 0.9rem (14.4px) */
+}
+
+/* Estilo do rodapé
+   Define o visual da área inferior do site */
+footer {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 1rem; /* Adiciona 1rem (16px) de espaçamento interno */
+    background: #35424a; /* Define a cor de fundo como azul escuro */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilo dos links no rodapé
+   Define o visual dos links no rodapé */
+footer a {
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s ease; /* Adiciona transição suave para a cor */
+    display: inline-flex; /* Ativa o layout flexível inline */
+    align-items: center; /* Centraliza os elementos verticalmente */
+    gap: 0.5rem; /* Adiciona 0.5rem (8px) de espaçamento entre os elementos */
+}
+
+/* Estilo do ícone no rodapé
+   Define o tamanho do ícone do GitHub */
+footer a i {
+    font-size: 1.2rem; /* Define o tamanho da fonte do ícone como 1.2rem (19.2px) */
+}
+
+/* Efeito hover nos links do rodapé
+   Define o comportamento quando o mouse passa sobre os links */
+footer a:hover {
+    color: #61dafb; /* Muda a cor do texto para azul claro */
+    text-decoration: underline; /* Adiciona um sublinhado */
+}
+
+/* ===== ESTILOS DO GATO ANIMADO ===== */
+
+/* Container principal do gato
+   Este elemento é fixo na tela e controla a posição geral do gato */
+.cat-container {
+    position: fixed; /* Mantém o gato fixo na tela, não rola com a página */
+    bottom: 20px; /* Posiciona o gato 20px acima do fundo da tela */
+    left: -100px; /* Inicia o gato fora da tela à esquerda */
+    z-index: 1000; /* Garante que o gato fique sobre outros elementos da página */
+    pointer-events: none; /* Permite que o usuário clique através do gato */
+}
+
+/* Animação do passeio do gato
+   Define os keyframes (quadros-chave) da animação de movimento */
+@keyframes catWalk {
+    /* Início da animação - gato começa fora da tela */
+    0% {
+        left: -100px; /* Posição inicial à esquerda */
+        transform: scaleX(1); /* Gato olhando para a direita (orientação normal) */
+    }
+    /* Meio do caminho para a direita */
+    49% {
+        transform: scaleX(1); /* Mantém olhando para a direita */
+    }
+    /* Ponto de virada - gato chega ao final da tela */
+    50% {
+        left: calc(100% + 100px); /* Posição final à direita */
+        transform: scaleX(-1); /* Inverte o gato para olhar para a esquerda */
+    }
+    /* Meio do caminho para a esquerda */
+    99% {
+        transform: scaleX(-1); /* Mantém olhando para a esquerda */
+    }
+    /* Fim da animação - volta ao início */
+    100% {
+        left: -100px; /* Volta à posição inicial */
+        transform: scaleX(1); /* Volta a olhar para a direita */
+    }
+}
+
+/* Aplica a animação ao container do gato */
+.cat-container {
+    animation: catWalk 20s linear infinite; /* Animação contínua que dura 20 segundos */
+}
+
+/* Estrutura base do gato
+   Define o tamanho e posicionamento do elemento que contém todas as partes */
+.cat {
+    position: relative; /* Permite posicionar elementos filhos relativamente a este */
+    width: 50px; /* Largura total do gato */
+    height: 30px; /* Altura total do gato */
+}
+
+/* Corpo principal do gato
+   Forma oval que representa o torso */
+.cat-body {
+    position: absolute; /* Posiciona relativamente ao elemento .cat */
+    width: 40px; /* Largura do corpo */
+    height: 20px; /* Altura do corpo */
+    background: #333; /* Cor do corpo (cinza escuro) */
+    border-radius: 20px; /* Arredonda as bordas para criar forma oval */
+    top: 5px; /* Posiciona 5px do topo do elemento .cat */
+}
+
+/* Cauda do gato
+   Elemento que se move independentemente */
+.cat-tail {
+    position: absolute; /* Posiciona relativamente ao elemento .cat */
+    width: 20px; /* Largura da cauda */
+    height: 5px; /* Altura da cauda */
+    background: #333; /* Cor da cauda (mesma do corpo) */
+    right: -15px; /* Posiciona à direita do corpo */
+    top: 10px; /* Posiciona 10px do topo */
+    border-radius: 5px; /* Arredonda as bordas */
+    transform-origin: left; /* Define o ponto de rotação da cauda */
+    animation: tailWag 1s infinite alternate; /* Animação de balanço da cauda */
+}
+
+/* Animação do balanço da cauda
+   Define o movimento de vai-e-vem da cauda */
+@keyframes tailWag {
+    0% { transform: rotate(-10deg); } /* Cauda virada para a esquerda */
+    100% { transform: rotate(10deg); } /* Cauda virada para a direita */
+}
+
+/* Cabeça do gato
+   Contém todos os elementos faciais */
+.cat-head {
+    position: absolute; /* Posiciona relativamente ao elemento .cat */
+    width: 30px; /* Largura da cabeça */
+    height: 25px; /* Altura da cabeça */
+    background: #333; /* Cor da cabeça (mesma do corpo) */
+    border-radius: 15px; /* Arredonda as bordas */
+    left: -5px; /* Posiciona à esquerda do corpo */
+}
+
+/* Container das orelhas
+   Agrupa as duas orelhas do gato */
+.cat-ears {
+    position: absolute; /* Posiciona relativamente à cabeça */
+    top: -5px; /* Posiciona acima da cabeça */
+    width: 100%; /* Ocupa toda a largura da cabeça */
+}
+
+/* Estilo base para ambas as orelhas
+   Cria a forma triangular usando bordas */
+.cat-ear-left,
+.cat-ear-right {
+    position: absolute; /* Posiciona relativamente ao container de orelhas */
+    width: 0; /* Largura zero para criar triângulo com bordas */
+    height: 0; /* Altura zero para criar triângulo com bordas */
+    border-left: 5px solid transparent; /* Borda esquerda transparente */
+    border-right: 5px solid transparent; /* Borda direita transparente */
+    border-bottom: 10px solid #333; /* Borda inferior forma o triângulo */
+}
+
+/* Orelha esquerda
+   Posiciona e rotaciona a orelha esquerda */
+.cat-ear-left {
+    left: 5px; /* Posição à esquerda */
+    transform: rotate(-15deg); /* Rotação para a esquerda */
+}
+
+/* Orelha direita
+   Posiciona e rotaciona a orelha direita */
+.cat-ear-right {
+    right: 5px; /* Posição à direita */
+    transform: rotate(15deg); /* Rotação para a direita */
+}
+
+/* Container dos olhos
+   Agrupa e posiciona os dois olhos */
+.cat-eyes {
+    position: absolute; /* Posiciona relativamente à cabeça */
+    top: 8px; /* Posição do topo */
+    width: 100%; /* Ocupa toda a largura da cabeça */
+    display: flex; /* Usa flexbox para alinhar os olhos */
+    justify-content: space-around; /* Espaça os olhos igualmente */
+}
+
+/* Estilo base para ambos os olhos */
+.cat-eye-left,
+.cat-eye-right {
+    width: 5px; /* Largura do olho */
+    height: 5px; /* Altura do olho */
+    background: white; /* Cor do olho */
+    border-radius: 50%; /* Forma circular */
+}
+
+/* Nariz do gato
+   Pequeno círculo rosa no centro do rosto */
+.cat-nose {
+    position: absolute; /* Posiciona relativamente à cabeça */
+    width: 4px; /* Largura do nariz */
+    height: 4px; /* Altura do nariz */
+    background: pink; /* Cor do nariz */
+    border-radius: 50%; /* Forma circular */
+    left: 50%; /* Centraliza horizontalmente */
+    top: 12px; /* Posição do topo */
+    transform: translateX(-50%); /* Ajusta o centro exato */
+}
+
+/* Boca do gato
+   Pequena linha curva abaixo do nariz */
+.cat-mouth {
+    position: absolute; /* Posiciona relativamente à cabeça */
+    width: 8px; /* Largura da boca */
+    height: 4px; /* Altura da boca */
+    border-bottom: 2px solid white; /* Cria a linha da boca */
+    border-radius: 0 0 4px 4px; /* Arredonda as bordas inferiores */
+    left: 50%; /* Centraliza horizontalmente */
+    top: 15px; /* Posição do topo */
+    transform: translateX(-50%); /* Ajusta o centro exato */
+}

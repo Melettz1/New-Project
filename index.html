@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento - indica que este é um documento HTML5 -->
+<html lang="pt-br">
+<!-- Tag raiz do documento HTML - lang="pt-br" define o idioma como português do Brasil -->
+
+<head>
+    <!-- Seção head: contém metadados e configurações da página que não são visíveis ao usuário -->
+    
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais e acentos -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis:
+         width=device-width: faz a largura da página se ajustar à largura do dispositivo
+         initial-scale=1.0: define o nível de zoom inicial -->
+    
+    <title>Melettz1 Works</title>
+    <!-- Define o título da página que aparece na aba do navegador -->
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo de estilos CSS externo que contém todas as regras de estilo -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Link para a biblioteca Font Awesome que fornece ícones para uso na página -->
+</head>
+
+<body>
+    <!-- Corpo do documento: contém todo o conteúdo visível da página -->
+
+    <header>
+        <!-- Cabeçalho da página: geralmente contém o logo e informações principais -->
+        
+        <div class="profile-container">
+            <!-- Container para agrupar a foto e informações do perfil:
+                 class="profile-container" permite estilização específica via CSS
+                 Este div organiza os elementos em uma coluna vertical -->
+            
+            <a href="https://github.com/Melettz1" target="_blank" class="profile-image">
+                <!-- Link para o perfil do GitHub:
+                     href: URL do perfil
+                     target="_blank": abre em nova aba
+                     class="profile-image": permite estilização específica da imagem -->
+                
+                <img src="https://github.com/Melettz1.png" alt="Foto de perfil de Pedro Meletti">
+                <!-- Imagem de perfil:
+                     src: URL da imagem
+                     alt: texto alternativo para acessibilidade (leitura por leitores de tela) -->
+            </a>
+            
+            <div class="profile-info">
+                <!-- Container para informações do perfil:
+                     class="profile-info": permite estilização específica do texto -->
+                
+                <h1>Melettz1 Works</h1>
+                <!-- Título principal da página:
+                     h1: indica o título mais importante da página -->
+                
+                <p>Beginner Web Development Student.</p>
+                <!-- Parágrafo com descrição:
+                     p: indica um parágrafo de texto -->
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Barra de navegação: contém links para diferentes seções da página -->
+        
+        <ul>
+            <!-- Lista não ordenada para os links de navegação:
+                 ul: cria uma lista sem numeração -->
+            
+            <li><a href="#About">About</a></li>
+            <!-- Item de lista com link para a seção Sobre:
+                 li: item da lista
+                 a: link com href apontando para a âncora #About -->
+            
+            <li><a href="#Projects">Projects</a></li>
+            <!-- Item de lista com link para a seção Projetos:
+                 href="#Projects": link para a âncora #Projects -->
+            
+            <li><a href="#Contact">Contact</a></li>
+            <!-- Item de lista com link para a seção Contato:
+                 href="#Contact": link para a âncora #Contact -->
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Conteúdo principal da página:
+             main: indica o conteúdo principal da página -->
+        
+        <section id="About">
+            <!-- Seção "Sobre":
+                 id="About": permite navegação direta para esta seção
+                 section: agrupa conteúdo relacionado -->
+            
+            <h2>About Me</h2>
+            <!-- Subtítulo da seção:
+                 h2: indica um subtítulo, hierarquicamente abaixo do h1 -->
+            
+            <p>Hello! I'm Pedro, a web development enthusiast. I started studying less than a week ago, and this is my second project. I'm currently taking the Rocketseat course and also learning on my own technologies like HTML, CSS, and JavaScript. I'm also working on improving my English to expand my opportunities in the field.</p>
+            <!-- Parágrafo com texto descritivo:
+                 p: contém o texto principal da seção -->
+        </section>
+
+        <section id="Projects">
+            <!-- Seção "Projetos":
+                 id="Projects": permite navegação direta para esta seção -->
+            
+            <h2>My Projects</h2>
+            <!-- Subtítulo da seção de projetos -->
+            
+            <div class="Project">
+                <!-- Container para cada projeto:
+                     class="Project": permite estilização específica para cada projeto
+                     Este div agrupa todas as informações de um projeto -->
+                
+                <h3>Project 1</h3>
+                <!-- Título do projeto:
+                     h3: indica um subtítulo, hierarquicamente abaixo do h2 -->
+                
+                <p>This was my first project, created on my very first day of studying web development. It's a basic website built using HTML, CSS, and JavaScript, focusing on simple structure, styling, and interactivity</p>
+                <!-- Descrição do projeto:
+                     p: contém a descrição detalhada do projeto -->
+                
+                <a href="https://codepen.io/Melettz1/pen/MYYVJbE" target="_blank" class="project-link">
+                    <!-- Link para o projeto no CodePen:
+                         href: URL do projeto no CodePen
+                         target="_blank": abre em nova aba
+                         class="project-link": permite estilização específica do link -->
+                    
+                    <i class="fas fa-external-link-alt"></i> View on CodePen
+                    <!-- Ícone e texto do link:
+                         i: elemento para ícones do Font Awesome
+                         class="fas fa-external-link-alt": define o ícone específico -->
+                </a>
+            </div>
+        </section>
+
+        <section id="Contact">
+            <!-- Seção "Contato":
+                 id="Contact": permite navegação direta para esta seção -->
+            
+            <h2>Contact</h2>
+            <!-- Subtítulo da seção de contato -->
+            
+            <p>E-mail: Pedromeletti8@gmail.com</p>
+            <!-- Informação de contato:
+                 p: contém o endereço de e-mail -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Rodapé da página:
+             footer: contém informações de rodapé como copyright e links -->
+        
+        <p>&copy; 2025 - Pedro Meletti</p>
+        <!-- Copyright e ano:
+             &copy;: símbolo de copyright
+             p: contém o texto do copyright -->
+        
+        <p>Created by <a href="https://github.com/Melettz1" target="_blank"><i class="fab fa-github"></i> @Melettz1</a></p>
+        <!-- Créditos com link para o GitHub:
+             a: link para o perfil do GitHub
+             i: ícone do GitHub do Font Awesome -->
+    </footer>
+
+    <!-- Gato animado que passeia pela página -->
+    <div class="cat-container">
+        <!-- Container principal do gato:
+             class="cat-container": permite posicionamento fixo e animação
+             Este div mantém o gato fixo na parte inferior da tela -->
+        
+        <div class="cat">
+            <!-- Container para todas as partes do gato:
+                 class="cat": agrupa todos os elementos que formam o gato -->
+            
+            <div class="cat-body"></div>
+            <!-- Corpo do gato:
+                 class="cat-body": define o corpo principal do gato -->
+            
+            <div class="cat-tail"></div>
+            <!-- Cauda do gato:
+                 class="cat-tail": define a cauda com animação de balanço -->
+            
+            <div class="cat-head">
+                <!-- Cabeça do gato:
+                     class="cat-head": contém todos os elementos faciais do gato -->
+                
+                <div class="cat-ears">
+                    <!-- Container para as orelhas:
+                         class="cat-ears": agrupa as duas orelhas do gato -->
+                    
+                    <div class="cat-ear-left"></div>
+                    <!-- Orelha esquerda:
+                         class="cat-ear-left": define a orelha esquerda -->
+                    
+                    <div class="cat-ear-right"></div>
+                    <!-- Orelha direita:
+                         class="cat-ear-right": define a orelha direita -->
+                </div>
+                
+                <div class="cat-face">
+                    <!-- Rosto do gato:
+                         class="cat-face": contém os elementos faciais -->
+                    
+                    <div class="cat-eyes">
+                        <!-- Container para os olhos:
+                             class="cat-eyes": agrupa os dois olhos -->
+                        
+                        <div class="cat-eye-left"></div>
+                        <!-- Olho esquerdo:
+                             class="cat-eye-left": define o olho esquerdo -->
+                        
+                        <div class="cat-eye-right"></div>
+                        <!-- Olho direito:
+                             class="cat-eye-right": define o olho direito -->
+                    </div>
+                    
+                    <div class="cat-nose"></div>
+                    <!-- Nariz do gato:
+                         class="cat-nose": define o nariz rosa -->
+                    
+                    <div class="cat-mouth"></div>
+                    <!-- Boca do gato:
+                         class="cat-mouth": define a boca com linha curva -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
